@@ -51,7 +51,7 @@ export const StyledInput = styled.input`
     }} ${(props) => props.startIcon ? "3.6rem" : "1.2rem" } ;
   padding-right:${(props) => props.endIcon && "3.6rem" } ;
   border-radius: 8px;
-  border: 1px solid ${(props) => props.color || "#828282"};
+  border: 1px solid #828282;
   font: 500 1.4rem "Noto Sans Jp", sans-serif;
   color: #828282;
   outline: none;

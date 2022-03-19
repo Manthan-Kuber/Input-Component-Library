@@ -40,7 +40,7 @@ const Input = (props) => {
               error={props.error}
               fullWidth={props.fullWidth}
               disabled={props.disabled}
-              value={props.value}
+              defaultValue={props.defaultValue}
               size={props.size}
               startIcon={props.startIcon}
               endIcon={props.endIcon}
