@@ -11,14 +11,14 @@ function App() {
         <Input />
         <Input error />
         <Input disabled />
-        <Input helperText="Some Interesting text" />
+        <Input helperText="Some nice text" />
         <Input helperText="Some Interesting text" error />
-        <Input value='Text'/>
-        <Input size='sm'/>
-        <Input size='md'/>
+        <Input value="Text" />
+        <Input size="sm" />
+        <Input size="md" />
         <Input fullWidth />
-        <Input startIcon='search' />
-        <Input endIcon='lock' />
+        <Input startIcon="search" />
+        <Input endIcon="search" />
       </Main>
     </>
   );

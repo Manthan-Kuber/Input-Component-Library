@@ -1,12 +1,19 @@
 import React from "react";
-import { InputContainer, StyledInput } from "./Input.styles";
+import {
+  InputContainer,
+  StyledInput,
+  StartIconSpan,
+  EndIconSpan,
+} from "./Input.styles";
 
 const Input = (props) => {
   return (
     <>
-      <InputContainer error={props.error}>
+      <InputContainer error={props.error} fullWidth={props.fullWidth}>
         {props.startIcon ? (
-          <span class="material-icons">{props.startIcon}</span>
+          <StartIconSpan className="material-icons">
+            {props.startIcon}
+          </StartIconSpan>
         ) : null}
         <label>{props.label || "Label"}</label>
         <StyledInput
@@ -17,10 +24,13 @@ const Input = (props) => {
           disabled={props.disabled}
           value={props.value}
           size={props.size}
+          startIcon={props.startIcon}
+          endIcon={props.endIcon}
+          rows = {props.rows}
         />
         {props.helperText ? <small>{props.helperText}</small> : null}
         {props.endIcon ? (
-          <span class="material-icons">{props.endIcon}</span>
+          <EndIconSpan className="material-icons">{props.endIcon}</EndIconSpan>
         ) : null}
       </InputContainer>
     </>
