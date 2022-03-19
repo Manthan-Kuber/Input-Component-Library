@@ -19,6 +19,8 @@ function App() {
         <Input fullWidth />
         <Input startIcon="search" />
         <Input endIcon="search" />
+        <Input multiline rows='4' />
+        <Input color='green' />
       </Main>
     </>
   );

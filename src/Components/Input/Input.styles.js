@@ -22,7 +22,7 @@ export const InputContainer = styled.div`
   &:focus-within {
     & label,
     & small {
-      color: #2962ff;
+      color: ${(props) => props.color || "#2962ff" };
     }
   }
 
@@ -48,7 +48,8 @@ export const StyledInput = styled.input`
         default:
           return "1.8rem";
       }
-    }} ${(props) => props.startIcon || props.endIcon ? "3.6rem" : "1.2rem" } ;
+    }} ${(props) => props.startIcon ? "3.6rem" : "1.2rem" } ;
+  padding-right:${(props) => props.endIcon && "3.6rem" } ;
   border-radius: 8px;
   border: 1px solid ${(props) => props.color || "#828282"};
   font: 500 1.4rem "Noto Sans Jp", sans-serif;
@@ -56,13 +57,14 @@ export const StyledInput = styled.input`
   outline: none;
   width: ${(props) => props.fullWidth && "100%"};
   max-width: 100%;
+  resize: none;
 
   &:hover {
     border-color: #333;
   }
 
   &:focus {
-    border-color: ${(props) => (props.error ? "#D32F2F" : "#2962ff")};
+    border-color: ${(props) => (props.error ? "#D32F2F" : props.color || "#2962ff")};
   }
 
   ${(props) =>
@@ -86,4 +88,6 @@ export const EndIconSpan = styled.span`
   bottom:1.6rem;
   right:1rem;
 `;
+
+
 
